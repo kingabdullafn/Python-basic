@@ -1,0 +1,1 @@
+print("May you be sitting in the highest rank of jannah ammen")
