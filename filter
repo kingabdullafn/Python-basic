@@ -1,0 +1,25 @@
+def square_and_filter(start, end):
+    squares = []
+    even_squares = []
+    odd_squares = []
+
+    for num in range(start, end + 1):
+        sq = num ** 2           # Fix assignment
+        squares.append(sq)
+
+        if sq % 2 == 0:
+            even_squares.append(sq)
+        else:
+            odd_squares.append(sq)
+
+    # Print inside the function
+    print(f"Squares of numbers from {start} to {end}: {squares}")
+    print(f"Even Squares: {even_squares}")
+    print(f"Odd Squares: {odd_squares}")
+
+# Define start and end
+start = 1
+end = 10
+
+# Call the function
+square_and_filter(start, end)
