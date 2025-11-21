@@ -1,0 +1,26 @@
+from tkinter import*
+from datetime import datetime
+from tkinter import messagebox
+
+root = Tk() 
+root.title("Age calculator app")
+root.geometry('400x400')
+def age():
+  if my_entry.get():
+    current_year = datetime.now().year
+    your_age = current_year - int(my_entry.get())
+    messagebox.showinfo("your age" , f"your govermental age is: {your_age}")
+  else:
+    messagebox.showerror("ERROR","stop messing around and put in your dob")
+    
+
+    
+    
+
+my_label = Label(root, text = "What is your govermental birthyear", font= ("comic sans ms", 10))
+my_label.pack(pady=30)
+my_entry = Entry(root, font=("Comic sans ms", 18))
+my_entry.pack(pady=30)
+my_button = Button(root, text= "Calculate age!", font= ("Comic sans ms", 18), command=age)
+my_button.pack(pady=30)
+root.mainloop()
